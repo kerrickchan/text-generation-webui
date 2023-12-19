@@ -1,4 +1,4 @@
 # Only used by the one-click installer.
 # Example:
 # --listen --api
---model yi-34b.Q4_K_M.gguf --api
+--loader ctransformer --model yi-34b.Q4_K_M.gguf --api
