@@ -194,7 +194,7 @@ def install_webui():
 
     # Find the proper Pytorch installation command
     install_git = "conda install -y -k ninja git"
-    install_pytorch = "python -m pip install torch==2.1.* torchvision==0.16.* torchaudio==2.1.* "
+    install_pytorch = "python -m pip install torch torchvision torchaudio "
 
     use_cuda118 = "N"
     if any((is_windows(), is_linux())) and selected_gpu == "NVIDIA":
