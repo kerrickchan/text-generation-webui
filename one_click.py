@@ -78,17 +78,7 @@ def cpu_has_amx():
 
 
 def torch_version():
-    site_packages_path = None
-    for sitedir in site.getsitepackages():
-        if "site-packages" in sitedir and conda_env_path in sitedir:
-            site_packages_path = sitedir
-            break
-
-    if site_packages_path:
-        torch_version_file = open(os.path.join(site_packages_path, 'torch', 'version.py')).read().splitlines()
-        torver = [line for line in torch_version_file if '__version__' in line][0].split('__version__ = ')[1].strip("'")
-    else:
-        from torch import __version__ as torver
+    from torch import __version__ as torver
 
     return torver
 
